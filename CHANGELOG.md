@@ -1,5 +1,98 @@
 # heroku-buildpack-php CHANGELOG
 
+## v125 (2017-10-04)
+
+### ADD
+
+- PHP/7.0.24 [David Zuelke]
+- PHP/7.1.10 [David Zuelke]
+- ext-redis/3.1.4 [David Zuelke]
+- ext-mongodb/1.3.0 [David Zuelke]
+- ext-blackfire/1.18.0 [David Zuelke]
+
+### CHG
+
+- Composer/1.5.2 [David Zuelke]
+
+## v124 (2017-09-07)
+
+### FIX
+
+- Use Composer/1.5.1 [David Zuelke]
+
+## v123 (2017-09-07)
+
+### ADD
+
+- ext-mongo/1.6.16 [David Zuelke]
+- ext-newrelic/7.5.0.199 [David Zuelke]
+- ext-cassandra/1.3.2 [David Zuelke]
+- ext-rdkafka/3.0.4 [David Zuelke]
+- ext-phalcon/3.2.2 [David Zuelke]
+- PHP/7.1.9 [David Zuelke]
+- PHP/7.0.23 [David Zuelke]
+- ext-mongodb/1.2.10 [David Zuelke]
+
+### CHG
+
+- Support "heroku-sys-library" package type in platform installer [David Zuelke]
+- Add new argument for "provide" platform package manifest entry to `manifest.py` [David Zuelke]
+- Move libcassandra to its own package, installed as a dependency by platform installer [David Zuelke]
+- Move libmemcached to its own package, installed as a dependency by platform installer (if the platform doesn't already provide it) [David Zuelke]
+- Move librdkafka to its own package, installed as a dependency by platform installer [David Zuelke]
+- libcassandra/2.7.0 [David Zuelke]
+- librdkafka/0.11.0 [David Zuelke]
+- Composer/1.5.1 [David Zuelke]
+
+## v122 (2017-08-03)
+
+### ADD
+
+- ext-mongodb/1.2.9 [David Zuelke]
+- ext-amqp/1.9.1 [David Zuelke]
+- ext-blackfire/1.17.3 [David Zuelke]
+- ext-newrelic/7.4.0.198 [David Zuelke]
+- ext-phalcon/3.2.1 [David Zuelke]
+- ext-pq/2.1.2 [David Zuelke]
+- ext-redis/3.1.3 [David Zuelke]
+- ext-rdkafka/3.0.3 [David Zuelke]
+- PHP/7.0.22 [David Zuelke]
+- PHP/7.1.8 [David Zuelke]
+- PHP/5.6.31 [David Zuelke]
+
+### CHG
+
+- Do not auto-enable ext-newrelic and ext-blackfire in Heroku CI runs [David Zuelke]
+- Composer/1.4.2 [David Zuelke]
+- Do not error if buildpack package is installed during Heroku CI runs [David Zuelke]
+
+## v121 (2017-03-28)
+
+### ADD
+
+- ext-blackfire/1.15.0 [David Zuelke]
+- PHP/7.0.17 [David Zuelke]
+- PHP/7.1.3 [David Zuelke]
+- ext-cassandra/1.3.0 [David Zuelke]
+- ext-mongodb/1.2.8 [David Zuelke]
+- ext-amqp/1.9.0 (for heroku-16 only) [David Zuelke]
+- ext-newrelic/7.1.0.187 [David Zuelke]
+- ext-redis/3.1.2 [David Zuelke]
+- ext-event/2.3.0 [David Zuelke]
+- ext-phalcon/3.1.1 [David Zuelke]
+
+### CHG
+
+- Default to `web: heroku-php-apache2` process in case of empty `Procfile` [David Zuelke]
+- libcassandra-2.6.0 [David Zuelke]
+- librdkafka/0.9.4 [David Zuelke]
+- Composer/1.4.1 [David Zuelke]
+- Default to `web: heroku-php-apache2` (without explicit composer bin dir) process in case of missing `Procfile` [David Zuelke]
+
+### FIX
+
+- Failed download during bootstrap fails without meaningful error message [David Zuelke]
+
 ## v120 (2017-02-20)
 
 ### ADD
