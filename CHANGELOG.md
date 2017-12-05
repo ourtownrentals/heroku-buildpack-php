@@ -1,5 +1,49 @@
 # heroku-buildpack-php CHANGELOG
 
+## v127 (2017-11-30)
+
+### ADD
+
+- ext-rdkafka/3.0.5 [David Zuelke]
+- ext-mongodb/1.3.3 [David Zuelke]
+- ext-memcached/3.0.4 [David Zuelke]
+- PHP/7.0.26 [David Zuelke]
+- PHP/7.1.12 [David Zuelke]
+- PHP/7.2.0 [David Zuelke]
+
+### CHG
+
+- libcassandra/2.8.0 [David Zuelke]
+
+### FIX
+
+- Heroku\Buildpack\PHP\Downloader::download() is missing optional third argument [David Zuelke]
+- Files like `composer.js` or similar are inaccessible in web root (#247) [David Zuelke]
+
+## v126 (2017-10-29)
+
+### ADD
+
+- PHP/5.6.32 [David Zuelke]
+- PHP/7.0.25 [David Zuelke]
+- PHP/7.1.11 [David Zuelke]
+- ext-newrelic/7.6.0.201 [David Zuelke]
+- ext-mongodb/1.3.1 [David Zuelke]
+- ext-amqp/1.9.3 [David Zuelke]
+- ext-phalcon/3.2.4 [David Zuelke]
+- Apache/2.4.29 [David Zuelke]
+
+### CHG
+
+- Ignore `require-dev` when building platform package dependency graph (#240) [David Zuelke]
+- Rewrite `provide` sections with PHP extensions in package definitions to `replace` for known polyfill packages [David Zuelke]
+- libcassandra/2.7.1 [David Zuelke]
+- librdkafka/0.11.1 [David Zuelke]
+
+### FIX
+
+- gmp.h lookup patching broken since v125 / d024b14 [David Zuelke]
+
 ## v125 (2017-10-04)
 
 ### ADD
